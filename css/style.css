@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #3e3e3e;
+}
+
+nav ul {
+    font-size: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    font-size: 16px;
+}
+
+nav ul li:first-child a {
+    margin-left: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+}

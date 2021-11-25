@@ -1,0 +1,27 @@
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "overrides": [
+        {
+            "files": ["**/*.html"],
+            "options": {
+                "tabWidth": 2,
+                "parser": "html"
+            }
+        },
+        {
+            "files": ["**/*.js"],
+            "options": {
+                "arrowParens": "avoid"
+            }
+        },
+        {
+            "files": ["**/*.scss"],
+            "options": {
+                "parser": "scss"
+            }
+        }
+    ]
+}
