@@ -1,0 +1,14 @@
+.test {
+  background-color: red;
+  height: 80px;
+  width: 120px;
+  clip-path: polygon(
+    0% 0%,
+    56% 0,
+    100% 26%,
+    100% 100%,
+    75% 100%,
+    40% 100%,
+    0 100%
+  );
+}

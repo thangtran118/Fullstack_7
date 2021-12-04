@@ -1,0 +1,291 @@
+/* ========== Base CSS ==========*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+section {
+  padding-top: 75px;
+}
+
+/*========== commond class ========== */
+.d-flex {
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.order-convert {
+  order: -1;
+}
+
+.heading {
+  font-size: 4.5rem;
+  line-height: 54px;
+  margin-bottom: 75px;
+}
+
+.container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mb {
+  margin-bottom: 26px;
+}
+
+.ml {
+  margin-left: 32px;
+}
+
+.mr {
+  margin-right: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.row .column-1 {
+  width: 8.3333333333%;
+}
+.row .column-2 {
+  width: 16.6666666667%;
+}
+.row .column-3 {
+  width: 25%;
+}
+.row .column-4 {
+  width: 33.3333333333%;
+}
+.row .column-5 {
+  width: 41.6666666667%;
+}
+.row .column-6 {
+  width: 50%;
+}
+.row .column-7 {
+  width: 58.3333333333%;
+}
+.row .column-8 {
+  width: 66.6666666667%;
+}
+.row .column-9 {
+  width: 75%;
+}
+.row .column-10 {
+  width: 83.3333333333%;
+}
+.row .column-11 {
+  width: 91.6666666667%;
+}
+.row .column-12 {
+  width: 100%;
+}
+
+/*========== Header CSS ========== */
+.header {
+  background-image: url("../img/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header__nav {
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+.header__nav a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 4px;
+  padding: 0 20px;
+  color: #fff;
+}
+.header__nav a:hover {
+  background-color: white;
+  color: #007078;
+}
+.header__nav .logo {
+  font-size: 3rem;
+}
+.header__nav .menu {
+  font-size: 0;
+}
+.header__nav .menu__item {
+  font-size: 1.6rem;
+  float: left;
+}
+.header__profile {
+  padding: 180px 0;
+}
+.header__profile .info__name {
+  font-size: 3.7rem;
+  margin-bottom: 5px;
+}
+.header__profile .info__jobtitle {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+.header__profile .info__description {
+  margin-bottom: 40px;
+}
+.header__profile .info__contact {
+  padding: 17px 45px;
+  border-radius: 27px;
+  box-shadow: 2px 2px #4d4d4d;
+  color: #4c4c4c;
+  background-color: #fdfdfd;
+}
+.header__profile .info__contact:hover {
+  transition: all 0.25s ease-out;
+  color: #000;
+  background-color: #fff;
+}
+.header__profile .info__social {
+  font-size: 0;
+}
+.header__profile .info__social li {
+  font-size: 1.6rem;
+  display: inline-block;
+}
+.header__profile .info__social li + li {
+  margin-left: 17px;
+}
+.header__profile .info__social li img {
+  filter: grayscale(100%);
+}
+.header__profile .info__social li img:hover {
+  transition: all 0.25s ease-out;
+  filter: grayscale(0%);
+}
+
+/*========== about CSS ========== */
+.about {
+  color: #000;
+  padding-bottom: 120px;
+}
+.about__content {
+  cursor: pointer;
+  line-height: 35px;
+}
+
+/*========== Everywhere CSS ========== */
+.everywhere {
+  background-color: #eeeeee;
+  color: red;
+  color: #000;
+  padding-bottom: 115px;
+}
+.everywhere a {
+  height: 80px;
+  width: 100%;
+  line-height: 80px;
+  display: inline-block;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+/*========== Works CSS ========== */
+.works {
+  color: #000;
+}
+.works .work {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  border-bottom: 1px solid #d4d4d4;
+}
+.works .work h3 {
+  font-size: 4rem;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+
+/*========== Images CSS ========== */
+.images {
+  background-color: #097f8f;
+  padding-bottom: 100px;
+}
+.images .heading {
+  margin-bottom: 100px;
+}
+
+/*========== Contact CSS ========== */
+.contact {
+  color: #000;
+  padding-bottom: 70px;
+}
+.contact .heading {
+  margin-bottom: 80px;
+}
+.contact li {
+  margin-bottom: 5px;
+}
+
+/*========== Footer CSS ========== */
+.footer {
+  background-color: #333;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.footer h4 {
+  font-size: 2.4rem;
+  border-bottom: 1px solid #606060;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+.footer li {
+  margin: 5px 0;
+}
+.footer li a {
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */

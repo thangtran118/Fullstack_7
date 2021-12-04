@@ -1,0 +1,22 @@
+{
+  "name": "fullstack_7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w ./baitap/buivannguyen/assets/scss/style.scss:./baitap/buivannguyen/assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thangtran118/Fullstack_7.git"
+  },
+  "author": "thangtran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thangtran118/Fullstack_7/issues"
+  },
+  "homepage": "https://github.com/thangtran118/Fullstack_7#readme",
+  "dependencies": {
+    "sass": "^1.44.0"
+  }
+}

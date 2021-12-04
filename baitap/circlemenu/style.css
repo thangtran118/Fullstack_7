@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: linear-gradient(to right, #fc354c, #0abfbc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  height: 40px;
+  width: 40px;
+}
+.menu__toggler {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.menu__toggler:hover + label, .menu__toggler:hover + label:before, .menu__toggler:hover + label:after {
+  background: white;
+}
+.menu__toggler:checked + label {
+  background: transparent;
+}
+.menu__toggler:checked + label:before, .menu__toggler:checked + label:after {
+  top: 0;
+  width: 40px;
+  transform-origin: 50% 50%;
+}
+.menu__toggler:checked + label:before {
+  transform: rotate(45deg);
+}
+.menu__toggler:checked + label:after {
+  transform: rotate(-45deg);
+}
+.menu__toggler:checked ~ ul .menu__item {
+  opacity: 1;
+}
+.menu__toggler:checked ~ ul .menu__item:nth-child(1) {
+  transform: rotate(0deg) translateX(-110px);
+}
+.menu__toggler:checked ~ ul .menu__item:nth-child(2) {
+  transform: rotate(60deg) translateX(-110px);
+}
+.menu__toggler:checked ~ ul .menu__item:nth-child(3) {
+  transform: rotate(120deg) translateX(-110px);
+}
+.menu__toggler:checked ~ ul .menu__item:nth-child(4) {
+  transform: rotate(180deg) translateX(-110px);
+}
+.menu__toggler:checked ~ ul .menu__item:nth-child(5) {
+  transform: rotate(240deg) translateX(-110px);
+}
+.menu__toggler:checked ~ ul .menu__item:nth-child(6) {
+  transform: rotate(300deg) translateX(-110px);
+}
+.menu__toggler:checked ~ ul .menu__item a {
+  pointer-events: auto;
+}
+.menu__toggler + label {
+  width: 40px;
+  height: 5px;
+  display: block;
+  z-index: 1;
+  border-radius: 2.5px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.5s, top 0.5s;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.menu__toggler + label:before, .menu__toggler + label:after {
+  width: 40px;
+  height: 5px;
+  display: block;
+  z-index: 1;
+  border-radius: 2.5px;
+  background: rgba(255, 255, 255, 0.7);
+  transition: transform 0.5s, top 0.5s;
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.menu__toggler + label:before {
+  top: 10px;
+}
+.menu__toggler + label:after {
+  top: -10px;
+}
+.menu .menu__item:nth-child(1) a {
+  transform: rotate(0deg);
+}
+.menu .menu__item:nth-child(2) a {
+  transform: rotate(-60deg);
+}
+.menu .menu__item:nth-child(3) a {
+  transform: rotate(-120deg);
+}
+.menu .menu__item:nth-child(4) a {
+  transform: rotate(-180deg);
+}
+.menu .menu__item:nth-child(5) a {
+  transform: rotate(-240deg);
+}
+.menu .menu__item:nth-child(6) a {
+  transform: rotate(-300deg);
+}
+.menu__item {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  display: block;
+  opacity: 0;
+  transition: 0.5s;
+}
+.menu__item a {
+  display: block;
+  width: inherit;
+  height: inherit;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+.menu__item a:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 44.4444444444px;
+}
+
+/*# sourceMappingURL=style.css.map */

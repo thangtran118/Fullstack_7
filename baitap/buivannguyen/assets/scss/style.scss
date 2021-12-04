@@ -1,0 +1,270 @@
+// variables
+$primary-color: #fff;
+$secondary-color: #000;
+// mixin
+@mixin easeOut {
+  transition: all 0.25s ease-out;
+}
+
+/* ========== Base CSS ==========*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 2rem;
+  font-weight: 400;
+  color: $primary-color;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+section {
+  padding-top: 75px;
+}
+
+/*========== commond class ========== */
+.d-flex {
+  display: flex;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.order-convert {
+  order: -1;
+}
+
+.heading {
+  font-size: 4.5rem;
+  line-height: 54px;
+  margin-bottom: 75px;
+}
+
+.container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mb {
+  margin-bottom: 26px;
+}
+.ml {
+  margin-left: 32px;
+}
+
+.mr {
+  margin-right: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  @for $i from 1 through 12 {
+    .column-#{$i} {
+      width: calc(100% / 12 * $i);
+    }
+  }
+}
+
+/*========== Header CSS ========== */
+
+.header {
+  background-image: url('../img/header-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__nav {
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    a {
+      display: inline-block;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 4px;
+      padding: 0 20px;
+      color: $primary-color;
+      &:hover {
+        background-color: white;
+        color: #007078;
+      }
+    }
+    .logo {
+      font-size: 3rem;
+    }
+    .menu {
+      font-size: 0;
+      &__item {
+        font-size: 1.6rem;
+        float: left;
+      }
+    }
+  }
+
+  &__profile {
+    padding: 180px 0;
+    .info {
+      &__name {
+        font-size: 3.7rem;
+        margin-bottom: 5px;
+      }
+      &__jobtitle {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+      }
+      &__description {
+        margin-bottom: 40px;
+      }
+      &__contact {
+        padding: 17px 45px;
+        border-radius: 27px;
+        box-shadow: 2px 2px lighten($secondary-color, 30%);
+        color: #4c4c4c;
+        background-color: #fdfdfd;
+        &:hover {
+          @include easeOut;
+          color: $secondary-color;
+          background-color: $primary-color;
+        }
+      }
+      &__social {
+        font-size: 0;
+        li {
+          font-size: 1.6rem;
+          display: inline-block;
+          & + li {
+            margin-left: 17px;
+          }
+          img {
+            filter: grayscale(100%);
+            &:hover {
+              @include easeOut;
+              filter: grayscale(0%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*========== about CSS ========== */
+
+.about {
+  color: $secondary-color;
+  padding-bottom: 120px;
+  &__content {
+    cursor: pointer;
+    line-height: 35px;
+  }
+}
+
+/*========== Everywhere CSS ========== */
+.everywhere {
+  background-color: #eeeeee;
+  color: red;
+  color: $secondary-color;
+  padding-bottom: 115px;
+  a {
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    display: inline-block;
+    background-color: #2b2b2b;
+    color: $primary-color;
+  }
+}
+
+/*========== Works CSS ========== */
+.works {
+  color: $secondary-color;
+  .work {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    border-bottom: 1px solid #d4d4d4;
+    h3 {
+      font-size: 4rem;
+      line-height: 48px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+/*========== Images CSS ========== */
+.images {
+  background-color: #097f8f;
+  padding-bottom: 100px;
+  .heading {
+    margin-bottom: 100px;
+  }
+}
+
+/*========== Contact CSS ========== */
+.contact {
+  color: $secondary-color;
+  padding-bottom: 70px;
+  .heading {
+    margin-bottom: 80px;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+/*========== Footer CSS ========== */
+.footer {
+  background-color: #333;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  h4 {
+    font-size: 2.4rem;
+    border-bottom: 1px solid #606060;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  li {
+    margin: 5px 0;
+    a {
+      color: $primary-color;
+      font-size: 1.6rem;
+      line-height: 24px;
+    }
+  }
+}
