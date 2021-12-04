@@ -230,6 +230,9 @@ section {
   background-color: #2b2b2b;
   color: #fff;
 }
+.everywhere a:hover {
+  background-color: #1c1c1c;
+}
 
 /*========== Works CSS ========== */
 .works {
