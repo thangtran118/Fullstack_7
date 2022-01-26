@@ -1,0 +1,70 @@
+/*=============== Blog CSS Code ===============*/
+.blog {
+    &__content {
+        .article {
+            box-shadow: 0 1px 5px 0 $clr-gray;
+            &__top {
+                img {
+                    width: 100%;
+                }
+            }
+            &__bottom {
+                padding: 35px;
+                .article__title {
+                    margin-bottom: 10px;
+                    @include easeOut;
+                    &:hover {
+                        color: $clr-secondary;
+                    }
+                }
+                .article__info {
+                    .info-tag {
+                        margin: 12px 0;
+                    }
+                    .info-list {
+                        .info-list__item + .info-list__item {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__sidebar {
+        .sidebar {
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 1px 5px 0 $clr-gray;
+            &__heading {
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+                border-bottom: 1px solid $clr-gray;
+            }
+            &__content {
+                .post-list {
+                    &__item {
+                        & + .post-list__item {
+                            margin-top: 20px;
+                        }
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            object-fit: cover;
+                        }
+                        p {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .tag-list {
+                    &__item {
+                        width: 100px;
+                        & + .tag-list__item {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

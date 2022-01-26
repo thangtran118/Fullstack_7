@@ -1,0 +1,55 @@
+/*=============== Banner CSS ===============*/
+
+.banner {
+    min-height: 300px;
+    background: transparent;
+    text-align: center;
+    @include pseudo('before') {
+        width: 100%;
+        height: 100%;
+        background-color: $clr-primary;
+        opacity: 0.5;
+    }
+    &__caption {
+        font-size: 3.5rem;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+        @include easeOut(0.4);
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    &__btn {
+        text-transform: uppercase;
+        width: 170px;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+        @include easeOut(0.4);
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+@include responsive('sm') {
+    .banner {
+        &__caption {
+            font-size: 5.8rem;
+        }
+    }
+}
+
+@include responsive('md') {
+    .banner {
+        text-align: left;
+        &__caption {
+            font-size: 7rem;
+        }
+    }
+}

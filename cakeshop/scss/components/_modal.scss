@@ -1,0 +1,20 @@
+.modal {
+    &.show {
+        @include easeOut;
+        visibility: visible;
+        background-color: rgba($clr-black, 0.6);
+        .modal__main {
+            &.cart {
+                transform: translateX(0);
+            }
+        }
+    }
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}

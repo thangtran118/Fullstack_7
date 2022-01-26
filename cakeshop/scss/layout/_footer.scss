@@ -1,0 +1,13 @@
+/*=============== Footer CSS ===============*/
+.footer {
+    background-color: darken($clr-primary, 10%);
+    &__menu {
+        height: 30px;
+        .footer__menu-item + .footer__menu-item {
+            border-left: 1px solid $clr-secondary;
+        }
+        a {
+            line-height: 30px;
+        }
+    }
+}

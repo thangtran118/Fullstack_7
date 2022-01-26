@@ -1,0 +1,14 @@
+.tool-btn {
+    position: fixed;
+    right: 10px;
+    bottom: 100px;
+    &__item {
+        width: 40px;
+        height: 40px;
+        border-radius: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+}

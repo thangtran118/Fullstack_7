@@ -1,0 +1,93 @@
+/*=============== Bootstrap grid ===============*/
+
+// container SCSS
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@include responsive('sm') {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@include responsive('md') {
+    .container {
+        max-width: 720px;
+    }
+}
+@include responsive('lg') {
+    .container {
+        max-width: 960px;
+    }
+}
+@include responsive('xl') {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@include responsive('xxl') {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+// row SCSS
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    [class^='col-'] {
+        position: relative;
+        width: 100%;
+    }
+}
+
+// col, order, offset SCSS
+
+.order-first {
+    order: -1;
+}
+
+.order-last {
+    order: 13;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        flex-basis: calc(100% / 12 * $i);
+        max-width: calc(100% / 12 * $i);
+    }
+    .order-#{$i} {
+        order: $i;
+    }
+    .offset-#{$i} {
+        margin-left: calc(100% / 12 * $i);
+    }
+}
+@include responsive-full using ($type) {
+    @for $i from 1 through 12 {
+        .col-#{$type}-#{$i} {
+            flex-basis: calc(100% / 12 * $i);
+            max-width: calc(100% / 12 * $i);
+        }
+        .order-#{$type}-#{$i} {
+            order: $i;
+        }
+        .offset-#{$type}-#{$i} {
+            margin-left: calc(100% / 12 * $i);
+        }
+    }
+    .order-#{$type}-first {
+        order: -1;
+    }
+    .order-#{$type}-last {
+        order: 13;
+    }
+}

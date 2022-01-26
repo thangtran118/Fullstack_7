@@ -1,0 +1,82 @@
+/*=============== font-size ===============*/
+@each $i in $font-sizes {
+    .fs-#{$i} {
+        $to-rem: calc($i/10);
+        font-size: #{$to-rem}rem !important;
+    }
+}
+
+@include responsive-full using($type) {
+    @each $i in $font-sizes {
+        .fs-#{$type}-#{$i} {
+            $to-rem: calc($i/10);
+            font-size: #{$to-rem}rem !important;
+        }
+    }
+}
+
+/*=============== font-weight ===============*/
+
+@each $i in $font-weights {
+    .fw-#{$i} {
+        font-weight: $i !important;
+    }
+}
+
+/*=============== Text ===============*/
+@each $name in $text {
+    .text-#{$name} {
+        text-align: #{$name};
+    }
+}
+
+/*=============== Spacing ===============*/
+@each $attr-full, $attr-short in map-get($spacing, 'attr') {
+    @each $direction-full, $direction-short in map-get($spacing, 'directions') {
+        @each $size in map-get($spacing, 'sizes') {
+            .#{$attr-short}#{$direction-short}-#{$size} {
+                #{$attr-full}-#{$direction-full}: #{$size}px !important;
+            }
+        }
+    }
+}
+
+/*=============== Display ===============*/
+@each $name in $displays {
+    .d-#{$name} {
+        display: #{$name};
+    }
+}
+
+@include responsive-full using ($type) {
+    @each $name in $displays {
+        .d-#{$type}-#{$name} {
+            display: #{$name};
+        }
+    }
+}
+
+/*=============== Flex ===============*/
+@each $full-attr, $short-attr in map-get($flex, 'attr') {
+    @each $full-val, $short-val in map-get($flex, 'val') {
+        .#{$short-attr}-#{$short-val} {
+            #{$full-attr}: #{$full-val} !important;
+        }
+    }
+}
+
+@include responsive-full using ($type) {
+    @each $full-attr, $short-attr in map-get($flex, 'attr') {
+        @each $full-val, $short-val in map-get($flex, 'val') {
+            .#{$short-attr}-#{$type}-#{$short-val} {
+                #{$full-attr}: #{$full-val} !important;
+            }
+        }
+    }
+}
+
+@for $i from 1 to 12 {
+    .flex-#{$i} {
+        flex: #{$i};
+    }
+}

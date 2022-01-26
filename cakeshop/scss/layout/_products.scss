@@ -1,0 +1,86 @@
+/*=============== Products CSS ===============*/
+
+.products {
+    .product {
+        &__image {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            max-height: 250px;
+            width: 100%;
+            img {
+                @include easeOut(0.4);
+                height: 250px;
+            }
+            &-caption {
+                height: 50px;
+                position: absolute;
+                bottom: -50px;
+                left: 0;
+                transform: translateY(0);
+                @include easeOut(0.4);
+                .add-to-cart-btn {
+                    border-left: 1px solid $clr-primary;
+                }
+            }
+            &:hover {
+                img {
+                    transform: scale(1.08) translateY(-50px);
+                }
+                .product__image-caption {
+                    bottom: 0;
+                }
+            }
+        }
+        &-detail {
+            .add-to-cart-btn,
+            .buy-now-btn {
+                height: 50px;
+                width: 250px;
+            }
+            .size {
+                &__title {
+                    height: 50px;
+                    line-height: 50px;
+                }
+                &__btn {
+                    width: 100px;
+                    height: 50px;
+                    margin-right: 5px;
+                    &.active {
+                        color: $clr-white;
+                        background-color: $clr-primary;
+                    }
+                }
+            }
+            .quantity {
+                &__down,
+                &__nums,
+                &__up {
+                    width: 50px;
+                    height: 50px;
+                }
+                &__nums {
+                    display: inline-block;
+                    outline: none;
+                    background: transparent;
+                    color: $clr-white;
+                    border: 1px solid $clr-secondary;
+                }
+                &__title {
+                    height: 50px;
+                    line-height: 50px;
+                }
+            }
+            position: relative;
+            min-width: 1400px;
+            background-color: $clr-primary;
+            &__img {
+                border-right: 1px solid $clr-gray;
+                img {
+                    cursor: zoom-in;
+                }
+            }
+        }
+    }
+}

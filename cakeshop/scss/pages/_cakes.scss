@@ -1,0 +1,11 @@
+#cakes-page {
+    .categories {
+        &__item {
+            &.active {
+                background-color: $clr-secondary;
+                color: $clr-primary;
+            }
+            @include easeOut;
+        }
+    }
+}

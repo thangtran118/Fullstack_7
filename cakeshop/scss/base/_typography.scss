@@ -1,0 +1,54 @@
+/*=============== Typography CSS ===============*/
+
+@font-face {
+    font-family: 'jost';
+    src: url(../fonts/Jost.ttf);
+}
+
+@font-face {
+    font-family: 'PoiretOne';
+    src: url(..//fonts/PoiretOne.ttf);
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'jost', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+a {
+    cursor: pointer;
+    color: $clr-white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'PoiretOne', cursive, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 7rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}

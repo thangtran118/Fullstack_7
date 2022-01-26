@@ -1,0 +1,19 @@
+#login-page,
+#register-page {
+    padding-top: 100px;
+    .form {
+        border-radius: 20px;
+        background: lighten($clr-primary, 2.5);
+        box-shadow: inset -21px -21px 41px #090909, inset 21px 21px 41px #171717;
+        padding: 56px 150px;
+        &__header {
+            a {
+                font-size: 1.6rem;
+            }
+        }
+        &__bottom {
+            margin-bottom: 30px;
+            line-height: 47px;
+        }
+    }
+}

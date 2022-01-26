@@ -1,0 +1,64 @@
+/*=============== Button CSS ===============*/
+
+.btn-1,
+.btn-2,
+.btn-3 {
+    display: inline-block;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    touch-action: manipulation;
+    text-align: center;
+    padding: 14px 0;
+    width: 100%;
+    font-size: 1.5rem;
+    &:hover {
+        @include easeOut;
+    }
+    &.noradius {
+        border-radius: 0;
+    }
+}
+
+.btn-1 {
+    color: $clr-primary;
+    background-color: $clr-secondary;
+    border: 1px solid $clr-secondary;
+    &:hover {
+        color: $clr-secondary;
+        background-color: $clr-primary;
+    }
+    &.disabled {
+        pointer-events: none;
+        @include pseudo('before') {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $clr-white;
+            opacity: 0.2;
+            z-index: 101;
+        }
+    }
+}
+
+.btn-2 {
+    border: 1px solid $clr-gray;
+    background-color: transparent;
+    color: $clr-white;
+    &:hover {
+        background-color: $clr-secondary;
+        color: $clr-primary;
+    }
+}
+
+.btn-3 {
+    color: $clr-primary;
+    background-color: $clr-secondary;
+    border: 1px solid $clr-secondary;
+    &:hover {
+        border-color: $clr-black;
+        background-color: transparent;
+    }
+}

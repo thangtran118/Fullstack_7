@@ -1,0 +1,31 @@
+// all mixins of project
+
+/*========== Responsive ==========*/
+
+@mixin responsive($type) {
+    // $type: sm, md, lg in $breakponts
+    @media screen and (min-width: map-get($breakpoints, $type)) {
+        @content;
+    }
+}
+
+@mixin responsive-full {
+    @each $type, $size in $breakpoints {
+        @media screen and (min-width: map-get($breakpoints, $type)) {
+            @content ($type);
+        }
+    }
+}
+
+@mixin easeOut($time: 0.25) {
+    transition: all #{$time}s ease-out;
+}
+
+@mixin pseudo($pos) {
+    position: relative;
+    &::#{$pos} {
+        content: '';
+        position: absolute;
+        @content;
+    }
+}

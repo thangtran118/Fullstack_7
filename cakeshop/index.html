@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/icon.ico" />
+  <title>Cake Shop</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <!-- Link Fontawesome -->
+  <link rel="stylesheet" href="./assets/css/all.css" />
+
+  <!-- lazy load -->
+  <script src="./assets/js/vendor/lazysizes.min.js" async></script>
+</head>
+
+<body id="home-page" page="index">
+  <!-- Start Header -->
+  <header class="header">
+    <div class="container">
+      <div class="d-sm-flex justify-sm-between">
+        <a href="index.html" class="header__logo d-block text-center">
+          <img class="lazyload" data-src="./assets/images/logo.png" alt="logo" />
+        </a>
+        <div class="header__contact fs-16 d-lg-block d-none">
+          <span class="mr-15">Liên hệ:</span>
+          <span class="display-inline-block ml-15 mr-15">
+            <img data-src="./assets/images/svg/location.svg" alt="" height="15" width="15" class="mr-5 lazyload" />
+            123 Đê La Thành, Hà Nội
+          </span>
+          <span class=" display-inline-block ml-15 mr-15">
+            <img data-src="./assets/images/svg/phone.svg" alt="" height="15" width="15" class="mr-5 lazyload" />
+            <a href="tel:0123456789" class="fs-16">0123456789</a>
+          </span>
+        </div>
+        <div class="header__icon text-center">
+          <a href="login.html" class="pl-5 pr-5 btn-1 account-icon">Login</a>
+          <a href="register.html" class="pl-5 pr-5 btn-2 account-icon">Register</a>
+          <a href="#" class="cart-icon hover-01" data-notify="2" id="show-header-cart">
+            <i class="fal fa-shopping-cart ml-20 fs-24"></i>
+          </a>
+          <div class="nav-icon" id="show-header-menu">
+            <div class="nav-icon-line"></div>
+            <div class="nav-icon-line"></div>
+            <div class="nav-icon-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__cart-wrapper modal">
+      <div class="cart modal__main">
+        <h2>Your Cart</h2>
+        <div class="close-cart close-btn" id="close-header-cart">
+          <div class="close-btn-line"></div>
+          <div class="close-btn-line"></div>
+        </div>
+        <ul class="cart__list pt-40">
+          <li class="cart__item row">
+            <div class="cart__item-image col-3">
+              <img data-src="./assets/images/products/1.jpg" class="h-full lazyload" alt="product 1">
+              <div class="cart__item-delete">&times;</div>
+            </div>
+            <div class="col-9 pl-15">
+              <div class="mb-10">
+                Cake 1
+              </div>
+              <div class="d-flex justify-between fs-12">
+                <span class="cart__item-quantity">1</span>
+                <span class="pr-25">12.04$</span>
+              </div>
+            </div>
+          </li>
+          <div class="line mt-10 mb-20"></div>
+          <li class="cart__item row pb-10">
+            <div class="cart__item-image col-3">
+              <img data-src="./assets/images/products/2.jpg" class="h-full lazyload" alt="product 2">
+              <div class="cart__item-delete">&times;</div>
+            </div>
+            <div class="col-9 pl-15">
+              <div class="mb-10">
+                Cake 2
+              </div>
+              <div class="d-flex justify-between fs-12">
+                <span class="cart__item-quantity">1</span>
+                <span class="pr-25">17.65$</span>
+              </div>
+            </div>
+          </li>
+          <div class="line mt-10 mb-20"></div>
+        </ul>
+        <div class="cart__bottom fs-24 w-full">
+          <div class="d-flex justify-between mb-15">
+            <div>Total</div>
+            <div>100$</div>
+          </div>
+          <div class="row">
+            <div class="col-6 pr-5">
+              <a class="btn-3" href="cart.html">View Cart</a>
+            </div>
+            <div class="col-6 pl-5">
+              <div class="btn-3">Checkout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__menu-wrapper">
+      <div class="menu d-flex">
+        <div id="menu-branding" class="menu__branding d-none d-sm-flex justify-sm-center align-sm-center">
+          <div class="circle-logo d-flex justify-center align-center" style="flex-direction: column">
+            <img data-src="./assets/images/logo.png" alt="" class="mb-15 lazyload">
+            <p>Fresh cakes every day</p>
+          </div>
+        </div>
+        <div id="menu-nav" class="menu__nav w-full d-flex justify-center align-center">
+          <div class="close-menu close-btn" id="close-header-menu">
+            <div class="close-btn-line"></div>
+            <div class="close-btn-line"></div>
+          </div>
+          <ul>
+            <li>
+              <a class="active-page link-to-page d-inline-block w-full hover-02 fs-36 text-center mb-15"
+                href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="link-to-page d-inline-block w-full hover-02 fs-36 text-center mb-15" href="cakes.html">Cakes</a>
+            </li>
+            <li>
+              <a class="link-to-page d-inline-block w-full hover-02 fs-36 text-center mb-15" href="news.html">News</a>
+            </li>
+            <li>
+              <a class="link-to-page d-inline-block w-full hover-02 fs-36 text-center mb-15"
+                href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <!-- End Header -->
+  <!-- Start Banner -->
+  <section class="banner d-flex align-center mb-100" data-parallax="scroll"
+    data-image-src="./assets/images/banner/1.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-xl-7 col-xxl-6">
+          <h1 class="mb-40 banner__caption">Healthy Made Delicious Cake</h1>
+          <a href="cakes.html" class="btn-1 banner__btn">ORDER NOW</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Banner -->
+  <!-- Start about section -->
+  <section class="about mb-100">
+    <div class="about__heading text-center">
+      <h2 class="section__heading">
+        About Us
+      </h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-5 offset-xl-1 pr-15 pl-15 mb-40">
+          <h3 class="clr-secondary section__title">Cake Shop - Fresh cakes every day</h3>
+          <p>
+            The Cake Shop's mission is to make people happy. Making delicious
+            cakes, having relaxing chairs in a smoking free environment and
+            keeping our prices reasonable are all different ways to achieve this
+            goal.
+          </p>
+        </div>
+        <div class="col-12 col-md-6 col-xl-6 pl-15 pr-15 text-center">
+          <img class="lazyload" data-src="./assets/images/about.jpeg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End about section -->
+
+  <!-- Start Products -->
+  <section class="products mb-100">
+    <div class="text-center">
+      <h2 class="section__heading">
+        Cakes
+      </h2>
+    </div>
+    <div class="container">
+      <div class="row mb-40 products">
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15 mb-20 product">
+          <div class="modal d-flex justify-center align-center product-detail-wrapper">
+            <div class="modal__main product-detail">
+              <div class="close-btn close-product-detail">
+                <div class="close-btn-line"></div>
+                <div class="close-btn-line"></div>
+              </div>
+              <div class="row h-full">
+                <div class="col-5">
+                  <div class="product-detail__img d-flex justify-center align-center h-full  pt-80 pb-80 pl-70 pr-70">
+                    <img class="image-zoom w-full lazyload" data-src="./assets/images/products/1.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-7 pt-80 pb-80 pl-70 pr-70">
+                  <div class="h-full">
+                    <h3 class="fw-700 fs-36">Cake 1</h3>
+                    <span class="d-inline-block clr-secondary">132.42$</span>
+                    <p class="mt-20 fs-18 product-detail__description mb-25">This is cake's description but i don't know
+                      what i should write</p>
+                    <form action="" id="add-item-form">
+                      <div class="form__size size mb-25 d-flex">
+                        <span class="size__title mr-25">Size</span>
+                        <span class="size__btn btn-1 noradius active">6 inch</span>
+                        <span class="size__btn btn-1 noradius">7 inch</span>
+                        <span class="size__btn btn-1 noradius">8 inch</span>
+                      </div>
+                      <div class="form__quantity quantity d-flex mb-25">
+                        <span class="quantity__title mr-25">Quantity</span>
+                        <span class="quantity__down btn-1 noradius disabled">
+                          <i class="far fa-minus"></i>
+                        </span>
+                        <input type="text" class="quantity__nums text-center" value="1" readonly></input>
+                        <span class="quantity__up btn-1 noradius">
+                          <i class="far fa-plus"></i>
+                        </span>
+                      </div>
+                      <div class="form__bottom d-flex justify-around mt-40">
+                        <a href="#" class="btn-1 add-to-cart-btn" alert-title="Cake 1" , alert-text="is added to cart"
+                          alert-icon="success">Add to cart</a>
+                        <button class="btn-1 buy-now-btn">Buy now</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="product__image">
+            <img class="lazyload w-full" data-src="./assets/images/products/1.jpg" alt="" />
+            <span class="product__image-caption d-flex justify-between w-full">
+              <span class="btn-1 noradius view-detail-btn">View detail</span>
+              <span class="btn-1 noradius add-to-cart-btn" alert-title="Cake 1" alert-text="is added to cart"
+                alert-icon="success">Add to cart</span>
+            </span>
+          </span>
+          <h3>Cake 1</h3>
+          <p class="clr-secondary fs-15">$132.42</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15 mb-20 product">
+          <div class="modal d-flex justify-center align-center product-detail-wrapper">
+            <div class="modal__main product-detail">
+              <div class="close-btn close-product-detail">
+                <div class="close-btn-line"></div>
+                <div class="close-btn-line"></div>
+              </div>
+              <div class="row h-full">
+                <div class="col-5">
+                  <div class="product-detail__img d-flex justify-center align-center h-full  pt-80 pb-80 pl-70 pr-70">
+                    <img class="image-zoom w-full lazyload" data-src="./assets/images/products/2.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-7 pt-80 pb-80 pl-70 pr-70">
+                  <div class="h-full">
+                    <h3 class="fw-700 fs-36">Cake 2</h3>
+                    <span class="d-inline-block clr-secondary">132.42$</span>
+                    <p class="mt-20 fs-18 product-detail__description mb-25">This is cake's description but i don't know
+                      what i should write</p>
+                    <form action="" id="add-item-form">
+                      <div class="form__size size mb-25 d-flex">
+                        <span class="size__title mr-25">Size</span>
+                        <span class="size__btn btn-1 noradius active">6 inch</span>
+                        <span class="size__btn btn-1 noradius">7 inch</span>
+                        <span class="size__btn btn-1 noradius">8 inch</span>
+                      </div>
+                      <div class="form__quantity quantity d-flex mb-25">
+                        <span class="quantity__title mr-25">Quantity</span>
+                        <span class="quantity__down btn-1 noradius disabled">
+                          <i class="far fa-minus"></i>
+                        </span>
+                        <input type="text" class="quantity__nums text-center" value="1" readonly></input>
+                        <span class="quantity__up btn-1 noradius">
+                          <i class="far fa-plus"></i>
+                        </span>
+                      </div>
+                      <div class="form__bottom d-flex justify-around mt-40">
+                        <a href="#" class="btn-1 add-to-cart-btn" alert-title="Cake 2" , alert-text="is added to cart"
+                          alert-icon="success">Add to cart</a>
+                        <button class="btn-1 buy-now-btn">Buy now</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="product__image">
+            <img class="lazyload w-full" data-src="./assets/images/products/2.jpg" alt="" />
+            <span class="product__image-caption d-flex justify-between w-full">
+              <span class="btn-1 noradius view-detail-btn">View detail</span>
+              <span class="btn-1 noradius add-to-cart-btn" alert-title="Cake 2" alert-text="is added to cart"
+                alert-icon="success">Add to cart</span>
+            </span>
+          </span>
+          <h3>Cake 2</h3>
+          <p class="clr-secondary fs-15">$132.42</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15 mb-20 product">
+          <div class="modal d-flex justify-center align-center product-detail-wrapper">
+            <div class="modal__main product-detail">
+              <div class="close-btn close-product-detail">
+                <div class="close-btn-line"></div>
+                <div class="close-btn-line"></div>
+              </div>
+              <div class="row h-full">
+                <div class="col-5">
+                  <div class="product-detail__img d-flex justify-center align-center h-full  pt-80 pb-80 pl-70 pr-70">
+                    <img class="image-zoom w-full lazyload" data-src="./assets/images/products/3.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-7 pt-80 pb-80 pl-70 pr-70">
+                  <div class="h-full">
+                    <h3 class="fw-700 fs-36">Cake 3</h3>
+                    <span class="d-inline-block clr-secondary">132.42$</span>
+                    <p class="mt-20 fs-18 product-detail__description mb-25">This is cake's description but i don't know
+                      what i should write</p>
+                    <form action="" id="add-item-form">
+                      <div class="form__size size mb-25 d-flex">
+                        <span class="size__title mr-25">Size</span>
+                        <span class="size__btn btn-1 noradius active">6 inch</span>
+                        <span class="size__btn btn-1 noradius">7 inch</span>
+                        <span class="size__btn btn-1 noradius">8 inch</span>
+                      </div>
+                      <div class="form__quantity quantity d-flex mb-25">
+                        <span class="quantity__title mr-25">Quantity</span>
+                        <span class="quantity__down btn-1 noradius disabled">
+                          <i class="far fa-minus"></i>
+                        </span>
+                        <input type="text" class="quantity__nums text-center" value="1" readonly></input>
+                        <span class="quantity__up btn-1 noradius">
+                          <i class="far fa-plus"></i>
+                        </span>
+                      </div>
+                      <div class="form__bottom d-flex justify-around mt-40">
+                        <a href="#" class="btn-1 add-to-cart-btn" alert-title="Cake 3" , alert-text="is added to cart"
+                          alert-icon="success">Add to cart</a>
+                        <button class="btn-1 buy-now-btn">Buy now</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="product__image">
+            <img class="lazyload w-full" data-src="./assets/images/products/3.jpg" alt="" />
+            <span class="product__image-caption d-flex justify-between w-full">
+              <span class="btn-1 noradius view-detail-btn">View detail</span>
+              <span class="btn-1 noradius add-to-cart-btn" alert-title="Cake 3" alert-text="is added to cart"
+                alert-icon="success">Add to cart</span>
+            </span>
+          </span>
+          <h3>Cake 3</h3>
+          <p class="clr-secondary fs-15">$132.42</p>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15 mb-20 product">
+          <div class="modal d-flex justify-center align-center product-detail-wrapper">
+            <div class="modal__main product-detail">
+              <div class="close-btn close-product-detail">
+                <div class="close-btn-line"></div>
+                <div class="close-btn-line"></div>
+              </div>
+              <div class="row h-full">
+                <div class="col-5">
+                  <div class="product-detail__img d-flex justify-center align-center h-full  pt-80 pb-80 pl-70 pr-70">
+                    <img class="image-zoom w-full lazyload" data-src="./assets/images/products/4.jpg" alt="">
+                  </div>
+                </div>
+                <div class="col-7 pt-80 pb-80 pl-70 pr-70">
+                  <div class="h-full">
+                    <h3 class="fw-700 fs-36">Cake 4</h3>
+                    <span class="d-inline-block clr-secondary">132.42$</span>
+                    <p class="mt-20 fs-18 product-detail__description mb-25">This is cake's description but i don't know
+                      what i should write</p>
+                    <form action="" id="add-item-form">
+                      <div class="form__size size mb-25 d-flex">
+                        <span class="size__title mr-25">Size</span>
+                        <span class="size__btn btn-1 noradius active">6 inch</span>
+                        <span class="size__btn btn-1 noradius">7 inch</span>
+                        <span class="size__btn btn-1 noradius">8 inch</span>
+                      </div>
+                      <div class="form__quantity quantity d-flex mb-25">
+                        <span class="quantity__title mr-25">Quantity</span>
+                        <span class="quantity__down btn-1 noradius disabled">
+                          <i class="far fa-minus"></i>
+                        </span>
+                        <input type="text" class="quantity__nums text-center" value="1" readonly></input>
+                        <span class="quantity__up btn-1 noradius">
+                          <i class="far fa-plus"></i>
+                        </span>
+                      </div>
+                      <div class="form__bottom d-flex justify-around mt-40">
+                        <a href="#" class="btn-1 add-to-cart-btn" alert-title="Cake 4" , alert-text="is added to cart"
+                          alert-icon="success">Add to cart</a>
+                        <button class="btn-1 buy-now-btn">Buy now</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="product__image">
+            <img class="lazyload w-full" data-src="./assets/images/products/4.jpg" alt="" />
+            <span class="product__image-caption d-flex justify-between w-full">
+              <span class="btn-1 noradius view-detail-btn">View detail</span>
+              <span class="btn-1 noradius add-to-cart-btn" alert-title="Cake 4" alert-text="is added to cart"
+                alert-icon="success">Add to cart</span>
+            </span>
+          </span>
+          <h3>Cake 4</h3>
+          <p class="clr-secondary fs-15">$132.42</p>
+        </div>
+      </div>
+      <div class="row justify-center mt-40">
+        <div class="col-2">
+          <a href="cakes.html" class="btn-1 fs-16">Show more</a>
+        </div>
+      </div>
+  </section>
+  <!-- End Products -->
+
+  <!-- Start Customer section -->
+  <section class="customer-section mb-100">
+    <div class="text-center">
+      <h2 class="section__heading">
+        Food Lover's Say
+      </h2>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 customer">
+          <div class="customer__rating">
+            <ul class="d-flex">
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="customer__comment">
+            Fresh and delicious cake
+          </div>
+          <div class="customer__info d-flex">
+            <img class="lazyload" data-src="./assets/images/customer/1.png" alt="">
+            <p>Wiliam Cake</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 customer">
+          <div class="customer__rating">
+            <ul class="d-flex">
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="customer__comment">
+            Fresh and delicious cake
+          </div>
+          <div class="customer__info d-flex">
+            <img class="lazyload" data-src="./assets/images/customer/1.png" alt="">
+            <p>Wiliam Cake</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 customer">
+          <div class="customer__rating">
+            <ul class="d-flex">
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+              <li>
+                <i class="fas fa-star clr-secondary"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="customer__comment">
+            Fresh and delicious cake
+          </div>
+          <div class="customer__info d-flex">
+            <img class="lazyload" data-src="./assets/images/customer/1.png" alt="">
+            <p>Wiliam Cake</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Customer section -->
+
+  <!-- Start News section -->
+  <section class="news-section mb-100">
+    <div class="d-flex container justify-between">
+      <h2 class="section__heading">
+        News
+      </h2>
+      <a href="news.html" class="btn-1 col-2 news-more-btn fs-16">More News</a>
+    </div>
+    <div class="container container-v2">
+      <div class="row">
+        <div class="col-6">
+          <div class="news row">
+            <div class="news__image col-6 pr-15">
+              <img data-src="./assets/images/Blog/1.jpg" alt="" class="h-full lazyload">
+            </div>
+            <div class="news__info col-6 pl-15 pr-15">
+              <h3 class="clr-secondary fw-600">New Title 1</h3>
+              <p>This is description about news. I try to write as long as possible to check the maximum length and
+                width of this cell</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="news row">
+            <div class="news__image col-6 pr-15">
+              <img data-src="./assets/images/Blog/2.jpg" alt="" class="h-full lazyload">
+            </div>
+            <div class="news__info col-6 pl-15 pr-15">
+              <h3 class="clr-secondary fw-600">New Title 2</h3>
+              <p>This is description about news. I try to write as long as possible to check the maximum length and
+                width of this cell</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End News section -->
+  <section class="follow-me mb-40">
+    <div class="text-center">
+      <h2 class="section__heading">
+        Follow me
+      </h2>
+    </div>
+    <ul class="d-flex justify-center list">
+      <li class="list__item pl-5 pr-5">
+        <a href="#" class="btn-2 follow-me__btn">
+          <i class="fab fa-instagram"></i>
+          <span class="pl-5">Instagram</span>
+        </a>
+      </li>
+      <li class="list__item pl-5 pr-5">
+        <a href="https://www.facebook.com/100066833556632/" target="_blank" class="btn-2 follow-me__btn">
+          <i class="fab fa-facebook-f"></i>
+          <span class="pl-5">Facebook</span>
+        </a>
+      </li>
+      <li class="list__item pl-5 pr-5">
+
+        <a href="#" class="btn-2 follow-me__btn">
+          <i class="fab fa-twitter"></i>
+          <span class="pl-5">Twitter</span>
+        </a>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15">
+          <img class="lazyload" data-src="./assets/images/products/11.jpg" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15">
+          <img class="lazyload" data-src="./assets/images/products/12.jpg" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15">
+          <img class="lazyload" data-src="./assets/images/products/13.jpg" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15">
+          <img class="lazyload" data-src="./assets/images/products/14.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Start Footer -->
+  <footer class="footer mt-100 pt-40 pb-10 fs-14">
+    <ul class=" footer__menu d-flex justify-center align-center mb-100">
+      <li class="footer__menu-item">
+        <a href="index.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Home</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="cakes.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Cakes</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="news.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">News</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="contact.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Contact</a>
+      </li>
+    </ul>
+    <div class="d-md-none text-center footer__logo">
+      <img data-src="./assets/images/logo.png" alt="logo" class="mb-20 lazyload" />
+    </div>
+    <div class="container d-flex justify-around footer__top">
+      <div class="d-none d-md-block">
+        <img class="lazyload" data-src="./assets/images/logo.png" alt="logo" />
+      </div>
+      <div>
+        <img class="lazyload" data-src="./assets/images/svg/location.svg" alt="location" />
+        <p class="clr-secondary">Location</p>
+        <p>123 De La Thanh, Ha Noi</p>
+      </div>
+      <div class="footer__contact">
+        <img class="lazyload" data-src="./assets/images/svg/phone.svg" alt="phone" />
+        <p class="clr-secondary">Contact</p>
+        <a class="d-block hover-01" href="tel:0123456789">0123456789</a>
+        <a class="d-block hover-01" href="malto:thangtran123@gmail.com">thangtran123@gmail.com</a>
+      </div>
+    </div>
+    <div class="container line mt-15 mb-10"></div>
+    <div class="footer__bottom text-center">
+      Copyright &#169;2021 | Designed with
+      <i class="fa fa-heart color-danger clr-secondary"></i>
+      by
+      <a href="https://www.facebook.com/100066833556632/" target="_blank" class="clr-secondary">ThangTran</a>
+    </div>
+  </footer>
+  <div class="tool-btn">
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="https://www.facebook.com/100066833556632/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="far fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/vendor/parallax.min.js"></script>
+  <script src="./assets/js/vendor/jquery.zoom.min.js"></script>
+  <script src="./assets/js/vendor/sweetalert2.all.min.js"></script>
+
+  <script type="module">
+    import App from './assets/js/app.js';
+    // menu header js
+    App.menuHeader()
+    // header cart
+    App.cartHeader()
+    // banner
+    App.banner()
+  </script>
+  <!-- End Footer -->
+
+</body>
+<script type="module">
+  import App from './assets/js/app.js'
+  import Quantity from './assets/js/quantity.js'
+
+  // product
+  App.handleProductDetail()
+  App.showAlert('.add-to-cart-btn')
+</script>
+<script>
+  $('.image-zoom')
+    .wrap('<span style="display:inline-block"></span>')
+    .css('display', 'block')
+    .parent()
+    .zoom({
+      magnify: 1.5
+    });
+</script>
+
+</html>

@@ -1,0 +1,66 @@
+/*=============== Home CSS ===============*/
+#home-page {
+    .customer-section {
+        .customer {
+            border: 1px solid $clr-gray;
+            padding: 40px 40px 25px 40px;
+            &__rating {
+                margin-bottom: 15px;
+                letter-spacing: 5px;
+            }
+            &__comment {
+                margin-bottom: 36px;
+                font-size: 2.4rem;
+            }
+            &__info {
+                p {
+                    line-height: 40px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .news-section {
+        .container-v2 {
+            max-width: 1600px;
+        }
+        .news-more-btn {
+            margin-bottom: 70px;
+        }
+        .news {
+            height: 250px;
+            box-shadow: 0 1px 5px 0 $clr-gray;
+        }
+    }
+}
+
+@include responsive('sm') {
+    #home-page {
+        .banner {
+            min-height: 350px;
+        }
+    }
+}
+
+@include responsive('md') {
+    #home-page {
+        .banner {
+            min-height: 500px;
+        }
+    }
+}
+@include responsive('lg') {
+    #home-page {
+        .banner {
+            min-height: 580px;
+        }
+    }
+}
+
+@include responsive('xl') {
+    #home-page {
+        .banner {
+            min-height: 700px;
+        }
+    }
+}

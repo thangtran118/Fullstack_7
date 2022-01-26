@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/icon.ico" />
+  <title>Cake Shop</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <!-- Link Fontawesome -->
+  <link rel="stylesheet" href="./assets/css/all.css" />
+
+  <!-- lazy load -->
+  <script src="./assets/js/vendor/lazysizes.min.js" async></script>
+</head>
+
+<body id="contact-page" page="contact">
+  <!-- Start Header -->
+  <header class="header">
+    <div class="container">
+      <div class="d-sm-flex justify-sm-between">
+        <a href="index.html" class="header__logo d-block text-center">
+          <img class="lazyload" data-src="./assets/images/logo.png" alt="logo" />
+        </a>
+        <div class="header__contact fs-16 d-lg-block d-none">
+          <span class="mr-15">Liên hệ:</span>
+          <span class="display-inline-block ml-15 mr-15">
+            <img data-src="./assets/images/svg/location.svg" alt="" height="15" width="15" class="mr-5 lazyload" />
+            123 Đê La Thành, Hà Nội
+          </span>
+          <span class=" display-inline-block ml-15 mr-15">
+            <img data-src="./assets/images/svg/phone.svg" alt="" height="15" width="15" class="mr-5 lazyload" />
+            <a href="tel:0123456789" class="fs-16">0123456789</a>
+          </span>
+        </div>
+        <div class="header__icon text-center">
+          <a href="login.html" class="pl-5 pr-5 btn-1 account-icon">Login</a>
+          <a href="register.html" class="pl-5 pr-5 btn-2 account-icon">Register</a>
+          <a href="#" class="cart-icon hover-01" data-notify="2" id="show-header-cart">
+            <i class="fal fa-shopping-cart ml-20 fs-24"></i>
+          </a>
+          <div class="nav-icon" id="show-header-menu">
+            <div class="nav-icon-line"></div>
+            <div class="nav-icon-line"></div>
+            <div class="nav-icon-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__cart-wrapper modal">
+      <div class="cart modal__main">
+        <h2>Your Cart</h2>
+        <div class="close-cart close-btn" id="close-header-cart">
+          <div class="close-btn-line"></div>
+          <div class="close-btn-line"></div>
+        </div>
+        <ul class="cart__list pt-40">
+          <li class="cart__item row">
+            <div class="cart__item-image col-3">
+              <img data-src="./assets/images/products/1.jpg" class="h-full lazyload" alt="product 1">
+              <div class="cart__item-delete">&times;</div>
+            </div>
+            <div class="col-9 pl-15">
+              <div class="mb-10">
+                Cake 1
+              </div>
+              <div class="d-flex justify-between fs-12">
+                <span class="cart__item-quantity">1</span>
+                <span class="pr-25">12.04$</span>
+              </div>
+            </div>
+          </li>
+          <div class="line mt-10 mb-20"></div>
+          <li class="cart__item row pb-10">
+            <div class="cart__item-image col-3">
+              <img data-src="./assets/images/products/2.jpg" class="h-full lazyload" alt="product 2">
+              <div class="cart__item-delete">&times;</div>
+            </div>
+            <div class="col-9 pl-15">
+              <div class="mb-10">
+                Cake 2
+              </div>
+              <div class="d-flex justify-between fs-12">
+                <span class="cart__item-quantity">1</span>
+                <span class="pr-25">17.65$</span>
+              </div>
+            </div>
+          </li>
+          <div class="line mt-10 mb-20"></div>
+        </ul>
+        <div class="cart__bottom fs-24 w-full">
+          <div class="d-flex justify-between mb-15">
+            <div>Total</div>
+            <div>100$</div>
+          </div>
+          <div class="row">
+            <div class="col-6 pr-5">
+              <a class="btn-3" href="cart.html">View Cart</a>
+            </div>
+            <div class="col-6 pl-5">
+              <div class="btn-3">Checkout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__menu-wrapper">
+      <div class="menu d-flex">
+        <div id="menu-branding" class="menu__branding d-none d-sm-flex justify-sm-center align-sm-center">
+          <div class="circle-logo d-flex justify-center align-center" style="flex-direction: column">
+            <img data-src="./assets/images/logo.png" alt="" class="mb-15 lazyload">
+            <p>Fresh cakes every day</p>
+          </div>
+        </div>
+        <div id="menu-nav" class="menu__nav w-full d-flex justify-center align-center">
+          <div class="close-menu close-btn" id="close-header-menu">
+            <div class="close-btn-line"></div>
+            <div class="close-btn-line"></div>
+          </div>
+          <ul>
+            <li>
+              <a class="active-page link-to-page d-inline-block w-full hover-02 fs-36 text-center mb-15"
+                href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="link-to-page d-inline-block w-full hover-02 fs-36 text-center mb-15" href="cakes.html">Cakes</a>
+            </li>
+            <li>
+              <a class="link-to-page d-inline-block w-full hover-02 fs-36 text-center mb-15" href="news.html">News</a>
+            </li>
+            <li>
+              <a class="link-to-page d-inline-block w-full hover-02 fs-36 text-center mb-15"
+                href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <!-- End Header -->
+  <!-- Start Banner -->
+  <section class="banner d-flex align-center mb-100" data-parallax="scroll"
+    data-image-src="./assets/images/banner/1.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-xl-7 col-xxl-6">
+          <h1 class="mb-40 banner__caption">Contact</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Banner -->
+
+  <!-- Start Contact Section -->
+  <section class="contact container mb-100">
+    <h2 class="fw-600 fs-30 mb-40">Get in Touch</h2>
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <form action="" class="form pt-0">
+          <div class="form-group">
+            <input type="text" class="form__control" id="email" placeholder="Enter your Email" />
+          </div>
+          <div class="form-group">
+            <textarea id="content" placeholder="How can we help?" class="form__control"></textarea>
+          </div>
+          <div class="form__bottom">
+            <div class="btn-1">Send</div>
+          </div>
+        </form>
+      </div>
+      <div class="col-12 col-md-3 offset-md-1 order-first order-md-last">
+        <div class="row mb-40">
+          <div class="fs-24 col-2 d-flex justify-center align-center">
+            <i class="fal fa-house-user"></i>
+          </div>
+          <div class="col-10">
+            <h4 style="font-family: 'jost', sans-serif !important" class="fw-500 clr-secondary">Ha Noi, Viet Nam</h4>
+            <p>123 De La Thanh</p>
+          </div>
+        </div>
+        <div class="row mb-40">
+          <div class="fs-24 col-2 d-flex justify-center align-center">
+            <i class="far fa-phone-alt"></i>
+          </div>
+          <div class="col-10">
+            <h4 style="font-family: 'jost', sans-serif !important" class="fw-500 clr-secondary phone-number">0123456789
+            </h4>
+            <p>Mon to Fri 9am to 6pm</p>
+          </div>
+        </div>
+        <div class="row mb-40">
+          <div class="fs-24 col-2 d-flex justify-center align-center">
+            <i class="fal fa-envelope"></i>
+          </div>
+          <div class="col-10">
+            <h4 style="font-family: 'jost', sans-serif !important" class="fw-500 clr-secondary">thangtran123@gmail.com
+            </h4>
+            <p>Send us your query anytime!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+  <section class="follow-me mb-40">
+    <div class="text-center">
+      <h2 class="section__heading">
+        Follow me
+      </h2>
+    </div>
+    <ul class="d-flex justify-center list">
+      <li class="list__item pl-5 pr-5">
+        <a href="#" class="btn-2 follow-me__btn">
+          <i class="fab fa-instagram"></i>
+          <span class="pl-5">Instagram</span>
+        </a>
+      </li>
+      <li class="list__item pl-5 pr-5">
+        <a href="https://www.facebook.com/100066833556632/" target="_blank" class="btn-2 follow-me__btn">
+          <i class="fab fa-facebook-f"></i>
+          <span class="pl-5">Facebook</span>
+        </a>
+      </li>
+      <li class="list__item pl-5 pr-5">
+
+        <a href="#" class="btn-2 follow-me__btn">
+          <i class="fab fa-twitter"></i>
+          <span class="pl-5">Twitter</span>
+        </a>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15">
+          <img class="lazyload" data-src="./assets/images/products/11.jpg" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15">
+          <img class="lazyload" data-src="./assets/images/products/12.jpg" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15">
+          <img class="lazyload" data-src="./assets/images/products/13.jpg" alt="" />
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 pl-15 pr-15">
+          <img class="lazyload" data-src="./assets/images/products/14.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Start Footer -->
+  <footer class="footer mt-100 pt-40 pb-10 fs-14">
+    <ul class=" footer__menu d-flex justify-center align-center mb-100">
+      <li class="footer__menu-item">
+        <a href="index.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Home</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="cakes.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Cakes</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="news.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">News</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="contact.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Contact</a>
+      </li>
+    </ul>
+    <div class="d-md-none text-center footer__logo">
+      <img data-src="./assets/images/logo.png" alt="logo" class="mb-20 lazyload" />
+    </div>
+    <div class="container d-flex justify-around footer__top">
+      <div class="d-none d-md-block">
+        <img class="lazyload" data-src="./assets/images/logo.png" alt="logo" />
+      </div>
+      <div>
+        <img class="lazyload" data-src="./assets/images/svg/location.svg" alt="location" />
+        <p class="clr-secondary">Location</p>
+        <p>123 De La Thanh, Ha Noi</p>
+      </div>
+      <div class="footer__contact">
+        <img class="lazyload" data-src="./assets/images/svg/phone.svg" alt="phone" />
+        <p class="clr-secondary">Contact</p>
+        <a class="d-block hover-01" href="tel:0123456789">0123456789</a>
+        <a class="d-block hover-01" href="malto:thangtran123@gmail.com">thangtran123@gmail.com</a>
+      </div>
+    </div>
+    <div class="container line mt-15 mb-10"></div>
+    <div class="footer__bottom text-center">
+      Copyright &#169;2021 | Designed with
+      <i class="fa fa-heart color-danger clr-secondary"></i>
+      by
+      <a href="https://www.facebook.com/100066833556632/" target="_blank" class="clr-secondary">ThangTran</a>
+    </div>
+  </footer>
+  <div class="tool-btn">
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="https://www.facebook.com/100066833556632/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="far fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/vendor/parallax.min.js"></script>
+  <script src="./assets/js/vendor/jquery.zoom.min.js"></script>
+  <script src="./assets/js/vendor/sweetalert2.all.min.js"></script>
+
+  <script type="module">
+    import App from './assets/js/app.js';
+    // menu header js
+    App.menuHeader()
+    // header cart
+    App.cartHeader()
+    // banner
+    App.banner()
+  </script>
+  <!-- End Footer -->
+</body>
+
+</html>

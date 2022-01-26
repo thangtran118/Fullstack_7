@@ -1,0 +1,115 @@
+/*=============== Edit Scrollbar ===============*/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba($clr-primary, 0.3);
+    background-color: lighten($clr-primary, 7);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darken($clr-secondary, 15%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken($clr-secondary, 2);
+}
+
+/*=============== Base CSS Code ===============*/
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $clr-white;
+    background-color: $clr-primary;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+
+/*=============== Common classes ===============*/
+
+.test {
+    color: red !important;
+}
+
+// width, height
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.max-w-full {
+    max-width: 100%;
+}
+
+.min-w-full {
+    min-width: 100%;
+}
+
+.max-h-full {
+    max-height: 100%;
+}
+
+.min-h-full {
+    min-height: 100%;
+}
+
+// line
+.line {
+    display: block;
+    border: 1px solid $clr-gray;
+    width: 100%;
+    height: 0;
+}
+
+// color
+.clr-secondary {
+    color: $clr-secondary;
+}
+
+// pos
+.pull-right {
+    float: right;
+}
+
+//hover
+.hover-01 {
+    @include easeOut;
+    &:hover {
+        color: $clr-secondary;
+    }
+}
+
+.hover-02 {
+    @include easeOut;
+    &:hover {
+        letter-spacing: 3px;
+        color: $clr-secondary;
+    }
+}
+
+.section__heading {
+    margin-bottom: 70px;
+    display: inline-block;
+    @include pseudo('after') {
+        width: 60%;
+        height: 0px;
+        border-bottom: 1px solid $clr-secondary;
+        bottom: -5px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+.section__title {
+    margin-bottom: 28px;
+}

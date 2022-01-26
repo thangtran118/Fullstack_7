@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="./assets/images/icon.ico" />
+  <title>Cake Shop</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <!-- Link Fontawesome -->
+  <link rel="stylesheet" href="./assets/css/all.css" />
+
+  <!-- lazy load -->
+  <script src="./assets/js/vendor/lazysizes.min.js" async></script>
+</head>
+
+<body id="register-page" page="register">
+  <section class="container">
+    <div class="row justify-center">
+      <div class="col-6">
+        <div class="logo"></div>
+        <form action="" class="form mb-100" id="register-form">
+          <div class="form__header">
+            <a class="text-center d-block" href="index.html">
+              <img src="./assets/images/logo.png" alt="logo" />
+            </a>
+            <h2 class="text-center" style="font-size: 3rem; font-weight: 600; line-height: 6rem">
+              Create your account
+            </h2>
+            <p class="text-center mb-20">
+              Already have an account?
+              <a href="login.html" class="clr-secondary">Login</a>
+            </p>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form__control" id="name" placeholder=" " name="name" />
+            <label for="name" class="form__label">Full name</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form__control" id="phone" placeholder=" " name="phone" />
+            <label for="phone" class="form__label">Phone number</label>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form__control" id="password" placeholder=" " name="password" />
+            <label for="password" class="form__label">Password</label>
+          </div>
+          <div class="fs-12">
+            By clicking 'Create account', you agree to the
+            <a href="#" style="text-decoration: underline;" class="fs-12 clr-secondary">Terms of Use</a>
+            and acknowledge the
+            <a href="#" style="text-decoration: underline;" class="fs-12 clr-secondary">Privacy Policy</a>
+            .
+          </div>
+          <div class="form__bottom d-flex justify-between">
+            <button class="btn-1 btn-login" id="register-btn">Create account</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- Start Footer -->
+  <footer class="footer mt-100 pt-40 pb-10 fs-14">
+    <ul class=" footer__menu d-flex justify-center align-center mb-100">
+      <li class="footer__menu-item">
+        <a href="index.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Home</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="cakes.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Cakes</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="news.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">News</a>
+      </li>
+      <li class="footer__menu-item">
+        <a href="contact.html" class="d-inline-block fs-24 hover-01 pl-20 pr-20 h-full">Contact</a>
+      </li>
+    </ul>
+    <div class="d-md-none text-center footer__logo">
+      <img data-src="./assets/images/logo.png" alt="logo" class="mb-20 lazyload" />
+    </div>
+    <div class="container d-flex justify-around footer__top">
+      <div class="d-none d-md-block">
+        <img class="lazyload" data-src="./assets/images/logo.png" alt="logo" />
+      </div>
+      <div>
+        <img class="lazyload" data-src="./assets/images/svg/location.svg" alt="location" />
+        <p class="clr-secondary">Location</p>
+        <p>123 De La Thanh, Ha Noi</p>
+      </div>
+      <div class="footer__contact">
+        <img class="lazyload" data-src="./assets/images/svg/phone.svg" alt="phone" />
+        <p class="clr-secondary">Contact</p>
+        <a class="d-block hover-01" href="tel:0123456789">0123456789</a>
+        <a class="d-block hover-01" href="malto:thangtran123@gmail.com">thangtran123@gmail.com</a>
+      </div>
+    </div>
+    <div class="container line mt-15 mb-10"></div>
+    <div class="footer__bottom text-center">
+      Copyright &#169;2021 | Designed with
+      <i class="fa fa-heart color-danger clr-secondary"></i>
+      by
+      <a href="https://www.facebook.com/100066833556632/" target="_blank" class="clr-secondary">ThangTran</a>
+    </div>
+  </footer>
+  <div class="tool-btn">
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="https://www.facebook.com/100066833556632/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class="tool-btn__item btn-2" href="#">
+      <i class="far fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Vendor JS -->
+  <script src="./assets/js/vendor/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/vendor/parallax.min.js"></script>
+  <script src="./assets/js/vendor/jquery.zoom.min.js"></script>
+  <script src="./assets/js/vendor/sweetalert2.all.min.js"></script>
+
+  <script type="module">
+    import App from './assets/js/app.js';
+    // menu header js
+    App.menuHeader()
+    // header cart
+    App.cartHeader()
+    // banner
+    App.banner()
+  </script>
+  <!-- End Footer -->
+</body>
+<script>
+  $('.tool-btn').hide()
+</script>
+
+<!-- Validate  -->
+<script src="./assets/js/vendor/jquery.validate.min.js"></script>
+<script src="./assets/js/vendor/additional-methods.min.js"></script>
+<script src="./assets/js/validation.js"></script>
+
+<script>
+  $(() => {
+    $("#register-form").validate({
+      onfocusout: function (element) {
+        if (!this.checkable(element) && (element.name in this.submitted || !this.optional(element))) {
+          this.element(element);
+        }
+      },
+      rules: {
+        "name": {
+          required: true,
+          isName: true,
+          maxlength: 50
+        },
+        "phone": {
+          required: true,
+          isPhoneNumber: true,
+        },
+        "password": {
+          required: true,
+          isPassword: true
+        }
+      }
+    });
+    $('#register-btn').click((e) => {
+      e.preventDefault();
+      if ($('#login-form').valid()) { }
+    })
+  });
+</script>
+
+</html>
